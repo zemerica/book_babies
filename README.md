@@ -28,17 +28,24 @@ Full System Insights:
 * build out auto-updating A/B testing architecture and online results
 * include tooltips to show insights into how each section is generated
 
-## Dataset:
+## Datasets:
 
 https://www.kaggle.com/datasets/ymaricar/cmu-book-summary-dataset
 (Data is released under a Creative Commons Attribution-ShareAlike License)
 
+https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset
+CC0: Public Domain
+
+https://www.kaggle.com/datasets/sp1thas/book-depository-dataset
+<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>
+
 ## Method:
 
-1. perform EDA on the book summary dataset.  What is the distribution of book ages
-2. use a modified PCA analysis to detect the optimal embedding dimension, ala https://machinelearning.apple.com/research/single-training-dimension-selection-for-word-embedding-with-pca
-3. generate set of embeddings for each of the books using the available features and the optimal embedding dimension
-4. use SHAP and https://projector.tensorflow.org/ to explore the semantic meaning of the embeddings
-5. create a genetic_combinator function to generate a new embedding given two input embeddings by whatever genetic_pairing method is given
-6. match the resulting genetics with a (or several different?) daughters
-7. Do again, but with a version of the model that makes an adjustment to the cost function to weight in some way (toward newer titles is perhaps simplest for MVP, or once data augmentation is possible via 'what is available at your local library')
+1. perform EDA on the book summary dataset.  What is the distribution of book ages, author popularity, genres, etc..
+2. research various NLP models to generate embeddings on long-form summaries
+3. use a modified PCA analysis to detect the optimal embedding dimension, ala https://machinelearning.apple.com/research/single-training-dimension-selection-for-word-embedding-with-pca
+4. generate set of embeddings for each of the books using the available features and the optimal embedding dimension
+5. use SHAP and https://projector.tensorflow.org/ to explore the semantic meaning of the embeddings
+6. create a genetic_combinator function to generate a new embedding given two input embeddings by whatever genetic_pairing method is given
+7. match the resulting genetics with a (or several different?) daughters
+8. Do again, but with a version of the model that makes an adjustment to the cost function to weight in some way (toward newer titles is perhaps simplest for MVP, or once data augmentation is possible via 'what is available at your local library')
