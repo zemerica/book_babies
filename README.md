@@ -12,8 +12,9 @@ This is a demo of the use of embeddings to generate recommendations with user in
 
 Create a book baby from two book parents such that the baby represents a combination of the two parents' embeddings as calculated in a variety of sort of 'genetic pairings' such as:
 * as an average of the two input embeddings
-* as a random 50/50 selection between the embeddings of th two parent books
-* as a selection on a sliding % randomization (30/70?) between the embeddings of the two parent books
+* as a random 50/50 selection between the embeddings of the two parent books
+* as a selection on a sliding average between the embeddings of the two parent books
+* as a novel(?) genetic pairing of varying granularities.
 
 For each set of 2 (or N) parents, generate 3 (or M) daughter embeddings and return a book within the dataset which is most similar to the generated embedding.  I'll start with using 2 parents and 3 daughters, but this could be extended to any number of parents, N, and any number of daughters, M.
 
@@ -36,6 +37,7 @@ https://www.kaggle.com/datasets/ymaricar/cmu-book-summary-dataset
 https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset
 CC0: Public Domain
 
+? maybe - on hold for this one
 https://www.kaggle.com/datasets/sp1thas/book-depository-dataset
 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>
 
