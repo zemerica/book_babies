@@ -45,9 +45,9 @@ https://www.kaggle.com/datasets/sp1thas/book-depository-dataset
 
 1. perform EDA on the book summary dataset.  What is the distribution of book ages, author popularity, genres, etc..
 2. research various NLP models to generate embeddings on long-form summaries
-3. use a modified PCA analysis to detect the optimal embedding dimension, ala https://machinelearning.apple.com/research/single-training-dimension-selection-for-word-embedding-with-pca
+3. use a modified PCA analysis to detect the optimal embedding dimension, ala https://machinelearning.apple.com/research/single-training-dimension-selection-for-word-embedding-with-pca (nixing this for now, not really applicable to this project bc using a foundational model, but I plan to return to it)
 4. generate set of embeddings for each of the books using the available features and the optimal embedding dimension
 5. use SHAP and https://projector.tensorflow.org/ to explore the semantic meaning of the embeddings
-6. create a genetic_combinator function to generate a new embedding given two input embeddings by whatever genetic_pairing method is given
+6. create a genetic_pairing function to generate a new embedding given two input embeddings by whatever genetic_pairing method is given
 7. match the resulting genetics with a (or several different?) daughters
 8. Do again, but with a version of the model that makes an adjustment to the cost function to weight in some way (toward newer titles is perhaps simplest for MVP, or once data augmentation is possible via 'what is available at your local library')
